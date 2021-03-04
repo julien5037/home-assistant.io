@@ -10,8 +10,7 @@ ha_platforms:
   - device_tracker
 ---
 
-This integration offers presence detection by examining devices connected to a [Rogers Hitron CODA](https://www.rogers.com/customer/support/article/wi-fi-password-hitron-coda4582-cgn3amr-cgnm3552-cgn3acr-cgn3)
-or [Shaw Hitron CGNM](https://community.shaw.ca/docs/DOC-4066) Router.
+This integration offers presence detection by examining devices connected to a [Rogers Hitron CODA](https://www.rogers.com/customer/support/article/wi-fi-password-hitron-coda4582-cgn3amr-cgnm3552-cgn3acr-cgn3), [Shaw Hitron CGNM](https://community.shaw.ca/docs/DOC-4066) or [Fizz Hitron CODA](https://fizz.ca/en/wi-fi-technologies) Router.
 
 To use a Hitron router in your installation, add the following to your `configuration.yaml` file:
 
@@ -23,6 +22,11 @@ device_tracker:
     username: !secret router_username
     password: !secret router_password
     type: rogers
+```
+
+For the Fizz Hitron router, use:
+```yaml
+    type: shaw
 ```
 
 {% configuration %}
